@@ -1,0 +1,8 @@
+# CUDA 12.6 PyTorch wheels support the RTX 2070 Super (sm_75).
+# Install torch/torchaudio separately from download.pytorch.org/whl/cu126.
+qwen-asr==0.0.6
+av
+imageio-ffmpeg
+modelscope
+requests
+opencc-python-reimplemented
