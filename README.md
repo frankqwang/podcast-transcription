@@ -10,9 +10,9 @@
 
 ```bash
 cd pipeline
-./run-cpu-sample.sh
-./run-gpu-sample.sh
-./run-gpu.sh
+PODCAST_AUDIO=/absolute/path/to/audio.m4a ./run-cpu-sample.sh
+PODCAST_AUDIO=/absolute/path/to/audio.m4a ./run-gpu-sample.sh
+PODCAST_AUDIO=/absolute/path/to/audio.m4a ./run-gpu.sh
 ```
 
 GPU 流程按 RTX 2070 Super 8GB 配置：FP16、SDPA、batch size 1；ASR 和时间戳对齐分开运行。结果写到 `pipeline/outputs/`，其中原始识别稿和对齐结果分开保存。
