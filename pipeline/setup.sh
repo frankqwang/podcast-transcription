@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
-export UV_CACHE_DIR="$PWD/cache/uv" UV_PYTHON_INSTALL_DIR="$PWD/tools/python"
+# Share downloaded wheels across projects and virtual environments.
+export UV_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/uv" UV_PYTHON_INSTALL_DIR="$PWD/tools/python"
 export UV_HTTP_TIMEOUT=600 UV_CONCURRENT_DOWNLOADS=4
 uv_bin="$PWD/tools/uv-x86_64-unknown-linux-gnu/uv"
 if [[ ! -x "$uv_bin" ]]; then
