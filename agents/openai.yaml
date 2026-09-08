@@ -1,0 +1,4 @@
+interface:
+  display_name: "Podcast Transcription"
+  short_description: "Transcribe long Chinese podcasts locally with resumable ASR"
+  default_prompt: "Transcribe this local podcast with timestamps, preserve raw wording, and prepare a readable summary."
