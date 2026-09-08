@@ -6,9 +6,9 @@ The repository includes the reusable implementation under `pipeline/`. In this w
 
 ```bash
 cd /path/to/podcast-transcription/pipeline
-./run-cpu-sample.sh
-./run-gpu-sample.sh
-./run-gpu.sh
+PODCAST_AUDIO=/absolute/path/to/audio.m4a ./run-cpu-sample.sh
+PODCAST_AUDIO=/absolute/path/to/audio.m4a ./run-gpu-sample.sh
+PODCAST_AUDIO=/absolute/path/to/audio.m4a ./run-gpu.sh
 ```
 
 The default input is the current podcast file. For another file, pass `--audio /absolute/path/file.m4a` to `scripts/transcribe.py`; choose a new `--output` directory for a different input or settings. The GPU launcher first checks CUDA, then writes `outputs/full/transcript.md`, `segments.jsonl`, `metrics.json`, and alignment output.
